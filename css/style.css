@@ -55,7 +55,6 @@ textarea,
 #copyEditedButton,
 #copyOriginalButton {
     margin: 3px 15px;
-    padding: 0px 10px 0px 10px ;
     border-radius: 5px;
     height: 25px;
     font-family: monospace, Helvetica;
@@ -86,9 +85,9 @@ form {
 }
 
 ::selection {
-    color: #b3c6ff; /* зелений */
+    color: #b3c6ff;
     font-weight: bold;
-    text-shadow: 1px 1px 1px #7c85ef; /* темніший зелений */
+    text-shadow: 1px 1px 1px #7c85ef;
 }
 
 .TextArea {
