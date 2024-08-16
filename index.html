@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encryption (text)</title>
+    <title data-key="titlePageEncryption">Encryption (text)</title>
     <link rel="icon" type="image/png" href="images/encrypt_icon.svg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
@@ -20,13 +20,14 @@
             </div>
             <div class="header__section_main_services">
                 <div class="header__item headerButton">
-                    <a href="index.html">Encryption (text)</a>
+                    <a href="index.html" data-key="encryptionText">Encryption (text)</a>
                 </div>
                 <div class="header__item headerButton">
-                    <a href="password_generator.html">Password Generator</a>
+                    <a href="password_generator.html" data-key="passwordGenerator">Password Generator</a>
                 </div>
                 <div class="header__item headerButton">
-                    <a href="cipher_reliability_check.html">Reliability Check Center</a>
+                    <a href="cipher_reliability_check.html" data-key="reliabilityCheckCenter">Reliability Check
+                        Center</a>
                 </div>
             </div>
             <div class="header__section">
@@ -40,23 +41,24 @@
         </header>
         <nav class="scroll-nav">
             <ul>
-                <li><a href="index.html">Encryption (text)</a></li>
-                <li><a href="password_generator.html">Password Generator</a></li>
-                <li><a href="cipher_reliability_check.html">Reliability Check Center</a></li>
+                <li><a href="index.html" data-key="encryptionText">Encryption (text)</a></li>
+                <li><a href="password_generator.html" data-key="passwordGenerator">Password Generator</a></li>
+                <li><a href="cipher_reliability_check.html" data-key="reliabilityCheckCenter">Reliability Check
+                        Center</a></li>
             </ul>
         </nav>
         <main>
-            <h1 id="encryptDecryptTitle">Encrypt/decrypt the text</h1>
+            <h1 id="encryptDecryptTitle" data-key="encryptDecryptTitle">Encrypt/decrypt the text</h1>
             <div class="EncryptionControl">
                 <form class="SelectProcedure">
-                    <label>Select the procedure:</label>
+                    <label data-key="selectProcedureLabel">Select the procedure:</label>
                     <select id="selectProcedure">
-                        <option value="encrypt">Encrypt</option>
-                        <option value="decrypt">Decrypt</option>
+                        <option value="encrypt" data-key="encryptOption">Encrypt</option>
+                        <option value="decrypt" data-key="decryptOption">Decrypt</option>
                     </select>
                 </form>
                 <form class="ChooseEncryptKey">
-                    <label>Select the key:</label>
+                    <label data-key="selectKeyLabel">Select the key:</label>
                     <select id="chooseEncryptKey">
                         <option value="SC_UA">STS UA</option>
                         <option value="Caesar_UA_3">Caesar UA 3</option>
@@ -74,14 +76,14 @@
             </div>
             <div class="TextArea">
                 <form class="TextAreaOriginal">
-                    <label id="textOriginal">Original Text</label>
+                    <label id="textOriginal" data-key="textOriginal">Original Text</label>
                     <input disabled id="copyOriginalButton" type="button" onclick="copyTAWO()" value="⎘ Copy">
-                    <textarea id="ta-wo" placeholder="Original text"></textarea>
+                    <textarea id="ta-wo"></textarea>
                 </form>
                 <form class="TextAreaEdited">
-                    <label id="textEdited">Edited Text</label>
+                    <label id="textEdited" data-key="textEdited">Edited Text</label>
                     <input disabled id="copyEditedButton" type="button" onclick="copyTARO()" value="⎘ Copy">
-                    <textarea readonly id="ta-ro" placeholder="Edited text"></textarea>
+                    <textarea readonly id="ta-ro"></textarea>
                 </form>
             </div>
         </main>
@@ -89,58 +91,62 @@
             <div class="EncryptionHelp">
                 <form class="EncryptionHelpSection">
                     <details>
-                        <summary id="needHelpTitle">Need help?</summary>
+                        <summary id="needHelpTitle" data-key="needHelpTitle">Need help?</summary>
                         <details class="instruction">
-                            <summary>How to use the service: step-by-step instruction</summary>
+                            <summary data-key="instruction">How to use the service: step-by-step instruction</summary>
                             <ol>
-                                <li>Select the procedure: Choose "decrypt" if you want to decrypt the text, or "encrypt"
-                                    if you want to encrypt the text.</li>
-                                <li>Select the key: Here, you will select the key for your chosen procedure.</li>
-                                <li>After that, enter some text in the "Original text" form (the program will not work
-                                    otherwise).</li>
-                                <li>Once you have entered text in the "Original text" form, the program will unblock the
-                                    control buttons ("OK", "Reset", "Copy"), and you can press "OK" or simply hit
-                                    "Enter" on your keyboard to encrypt/decrypt your text. The encrypted or decrypted text
-                                    will be displayed in the "Edited text" form.</li>
-                                <li>If you want to copy your text (whether encrypted, decrypted, or original), you can
-                                    click the "Copy" button in the appropriate form. If you encrypt the text and then
-                                    accidentally erase the original text from the form, the text in the "Edited text"
-                                    form will remain active for copying (until you reload the page).</li>
+                                <li data-key="li1">Select the procedure: Choose "decrypt" if you want to decrypt the
+                                    text, or "encrypt" if you want to encrypt the text.</li>
+                                <li data-key="li2">Select the key: Here, you will select the key for your chosen
+                                    procedure.</li>
+                                <li data-key="li3">After that, enter some text in the "Original text" form (the program
+                                    will not work otherwise).</li>
+                                <li data-key="li4">Once you have entered text in the "Original text" form, the program
+                                    will unblock the control buttons ("OK", "Reset", "Copy"), and you can press "OK" or
+                                    simply hit "Enter" on your keyboard to encrypt/decrypt your text. The encrypted or
+                                    decrypted text will be displayed in the "Edited text" form.</li>
+                                <li data-key="li5">If you want to copy your text (whether encrypted, decrypted, or
+                                    original), you can click the "Copy" button in the appropriate form. If you encrypt
+                                    the text and then accidentally erase the original text from the form, the text in
+                                    the "Edited text" form will remain active for copying (until you reload the page).
+                                </li>
                             </ol>
                         </details>
                         <details>
-                            <summary>What is encryption and why should I use it?</summary>
-                            <p>Encryption is the process of converting text into a code that is unintelligible to
-                                outsiders to protect information from unauthorized access. Encryption is used to protect
-                                sensitive information such as passwords, personal data, financial information, etc.</p>
+                            <summary data-key="encryptionDefinition">What is encryption and why should I use it?
+                            </summary>
+                            <p data-key="encryptionDefinitionText">Encryption is the process of converting text into a
+                                code that is unintelligible to outsiders to protect information from unauthorized
+                                access. Encryption is used to protect sensitive information such as passwords, personal
+                                data, financial information, etc.</p>
                         </details>
                         <details>
-                            <summary>How is text encrypted or decrypted?</summary>
-                            <p>During encryption, the text is converted into an encrypted code using a specific
-                                algorithm and a key. An encryption key is a unique code used to both encrypt and decrypt
-                                the text.</p>
-                            <p> Decryption is the process of converting the encrypted text back to plain text
-                                using the same key that was used for encryption. Without the correct key, decryption is
-                                impossible.</p>
+                            <summary data-key="encryptionProcess">How is text encrypted or decrypted?</summary>
+                            <p data-key="encryptionProcessText1">During encryption, the text is converted into an
+                                encrypted code using a specific algorithm and a key. An encryption key is a unique code
+                                used to both encrypt and decrypt the text.</p>
+                            <p data-key="encryptionProcessText2">Decryption is the process of converting the encrypted
+                                text back to plain text using the same key that was used for encryption. Without the
+                                correct key, decryption is impossible.</p>
                         </details>
                         <details>
-                            <summary>Is the encryption used on this page secure?</summary>
-                            <p>No, this page only supports symmetric encryption (where the same key is used for
-                                encryption
-                                and decryption), so the text can be easily decrypted by guessing the key.</p>
+                            <summary data-key="security">Is the encryption used on this page secure?</summary>
+                            <p data-key="securityText">No, this page only supports symmetric encryption (where the same
+                                key is used for encryption and decryption), so the text can be easily decrypted by
+                                guessing the key.</p>
                         </details>
                         <details>
-                            <summary>Can I encrypt special characters and numbers?</summary>
-                            <p>Yes, the encryption on this page supports encryption of special characters and numbers
-                                along with regular text characters.
-                            </p>
+                            <summary data-key="specialCharacters">Can I encrypt special characters and numbers?
+                            </summary>
+                            <p data-key="specialCharactersText">Yes, the encryption on this page supports encryption of
+                                special characters and numbers along with regular text characters.</p>
                         </details>
                         <details>
-                            <summary>How can I make sure that the text is encrypted/decrypted correctly?</summary>
-                            <p>You can check the correctness of encryption/decryption by comparing the results with the
-                                original text by using crypt-keys in the website.</p>
+                            <summary data-key="verification">How can I make sure that the text is encrypted/decrypted
+                                correctly?</summary>
+                            <p data-key="verificationText">You can check the correctness of encryption/decryption by
+                                comparing the results with the original text by using crypt-keys in the website.</p>
                         </details>
-
                     </details>
                 </form>
             </div>
