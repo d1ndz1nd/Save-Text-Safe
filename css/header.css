@@ -2,7 +2,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background: #7b7b7b;
+    /*background: #7b7b7b;*/
     color: azure;
     font-family: monospace, Helvetica;
     font-size: 16px;
@@ -11,7 +11,11 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+header, .scroll-nav{
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
 .header__section,
@@ -47,7 +51,6 @@ a:hover{
 
 .scroll-nav ul {
   display: flex;
-  overflow-x: auto;
   list-style: none;
   padding: 15px;
   margin: 0;
@@ -70,8 +73,8 @@ a:hover{
 
 .scroll-nav{
     display: flex;
-    padding-top: 50px;
-    background: #6b6b6b;
+    padding-top: 60px;
+    /*background: #6b6b6b;*/
     position: fixed;
     width: 100%;
     left: 0;

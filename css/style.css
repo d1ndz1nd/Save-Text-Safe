@@ -1,12 +1,16 @@
 html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background: #4B4B4B;
+    height: fit-content;
+}
+
+body{
+    margin: 0;
+    background-size: 900% 900%;
+    background-image: linear-gradient(45deg, #5f2c82, #49a09d);
+    animation: gradient 15s ease infinite;
 }
 
 main {
-    margin-top: 60px;
+    margin-top: 65px;
     flex: 1 1 auto;
 }
 
@@ -51,12 +55,14 @@ textarea,
 #copyEditedButton,
 #copyOriginalButton {
     margin: 3px 15px;
+    padding: 0px 10px 0px 10px ;
     border-radius: 5px;
     height: 25px;
     font-family: monospace, Helvetica;
     font-weight: bold;
     cursor: pointer;
     border: none;
+    outline: none;
 }
 
 #resetResultsButton,
@@ -76,10 +82,13 @@ form {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     padding: 10px 18px 10px 18px;
+    background: #4B4B4B;
 }
 
 ::selection {
-    color: aquamarine;
+    color: #b3c6ff; /* зелений */
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #7c85ef; /* темніший зелений */
 }
 
 .TextArea {
@@ -90,12 +99,6 @@ form {
     gap: 15px;
 }
 
-.TextArea ::placeholder {
-    text-align: center;
-    font-style: italic;
-    font-size: 14px;
-}
-
 #ta-ro,
 #ta-wo {
     border-radius: 8px;
@@ -104,7 +107,6 @@ form {
 #ta-ro {
     background-color: #b6b6b6;
     cursor: default;
-
 }
 
 #textEdited,
@@ -137,8 +139,24 @@ summary {
 
 #needHelpTitle{
     text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    padding: 10px;
 }
 
 .instruction{
     border: 3px solid #ccc;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
