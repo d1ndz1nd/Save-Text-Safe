@@ -10,7 +10,7 @@ document.getElementById('selectLanguage').addEventListener('change', function ()
         }
     } else { 
         if (!currentPath.startsWith('/ua/')) {
-            window.location.href = '/ua' + currentPath;
+            window.location.href = 'ua' + currentPath;
         } else {
             window.location.href = currentPath;
         }
