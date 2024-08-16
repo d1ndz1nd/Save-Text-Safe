@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шифрування (текст)</title>
+    <link rel="icon" type="image/png" href="/images/encrypt_icon.svg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header__section">
+                <div class="header__item headerlogo__text">
+                    <a href="about.html" title="About">SaveTextSafe © 08.24</a>
+                </div>
+            </div>
+            <div class="header__section_main_services">
+                <div class="header__item headerButton">
+                    <a href="index.html">Шифрування (текст)</a>
+                </div>
+                <div class="header__item headerButton">
+                    <a href="password_generator.html">Генератор паролів</a>
+                </div>
+                <div class="header__item headerButton">
+                    <a href="cipher_reliability_check.html">Центр перевірки надійності</a>
+                </div>
+            </div>
+            <div class="header__section">
+                <div class="header__item language">
+                    <select id="selectLanguage">
+                        <option value="UA">UA</option>
+                        <option value="EN">EN</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+        <nav class="scroll-nav">
+            <ul>
+                <li><a href="index.html">Шифрування (текст)</a></li>
+                <li><a href="password_generator.html">Генератор паролів</a></li>
+                <li><a href="cipher_reliability_check.html">Центр перевірки надійності</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1 id="encryptDecryptTitle">Зашифрувати/Дешифрувати текст</h1>
+            <div class="EncryptionControl">
+                <form class="SelectProcedure">
+                    <label>Виберіть процедуру:</label>
+                    <select id="selectProcedure">
+                        <option value="encrypt">Зашифр.</option>
+                        <option value="decrypt">Дешифр.</option>
+                    </select>
+                </form>
+                <form class="ChooseEncryptKey">
+                    <label>Виберіть ключ:</label>
+                    <select id="chooseEncryptKey">
+                        <option value="SC_UA">SimpleEncryption UA</option>
+                        <option value="Caesar_UA_3">Caesar UA 3</option>
+                        <option value="atbash_UA">Atbash UA</option>
+                        <option value="SC_EN">SimpleEncryption EN</option>
+                        <option value="Caesar_EN_3">Caesar EN 5</option>
+                        <option value="atbash_EN">Atbash EN</option>
+                    </select>
+                </form>
+                <form class="ActionButtons">
+                    <button disabled id="submitButton" type="button" onclick="EncryptionRequest()">OK</button>
+                    <button disabled id="resetResultsButton" type="button" onclick="resetTextareaValue()">⟳
+                        Стерти</button>
+                </form>
+            </div>
+            <div class="TextArea">
+                <form class="TextAreaOriginal">
+                    <label id="textOriginal">Оригінальний текст</label>
+                    <input disabled id="copyOriginalButton" type="button" onclick="copyTAWO()" value="⎘ Копі">
+                    <textarea id="ta-wo" placeholder="Оригінальний текст"></textarea>
+                </form>
+                <form class="TextAreaEdited">
+                    <label id="textEdited">Редагований текст</label>
+                    <input disabled id="copyEditedButton" type="button" onclick="copyTARO()" value="⎘ Копі">
+                    <textarea readonly id="ta-ro" placeholder="Редагований текст"></textarea>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="EncryptionHelp">
+                <form class="EncryptionHelpSection">
+                    <details>
+                        <summary id="needHelpTitle">Потрібна допомога?</summary>
+                        <details class="instruction">
+                            <summary>Як користуватися сервісом: покрокова інструкція</summary>
+                            <ol>
+                                <li>Виберіть процедуру: Оберіть "дешифрувати", якщо ви хочете розшифрувати текст, або
+                                    "зашифрувати", якщо хочете зашифрувати текст.</li>
+                                <li>Оберіть ключ: Тут ви виберете ключ для обраної процедури.</li>
+                                <li>Після цього введіть текст у форму "Оригінальний текст" (програма не буде працювати в
+                                    іншому випадку).</li>
+                                <li>Як тільки ви введете текст у форму "Оригінальний текст", програма розблокує
+                                    контрольні кнопки ("ОК", "Скинути", "Копі"), і ви зможете натиснути "ОК" або просто
+                                    натиснути "Enter" на клавіатурі, щоб зашифрувати/дешифрувати ваш текст.
+                                    Зашифрований/дешифрований текст буде відображено у формі "Відредагований текст".
+                                </li>
+                                <li>Якщо ви хочете скопіювати ваш текст (будь то зашифрований, розшифрований або
+                                    оригінальний), ви можете натиснути кнопку "Копі" у відповідній формі. Якщо ви
+                                    зашифруєте текст і потім випадково видалите оригінальний текст з форми, текст у
+                                    формі "Відредагований текст" залишиться активним для копіювання (поки ви не
+                                    перезавантажите сторінку).</li>
+                            </ol>
+                        </details>
+                        <details>
+                            <summary>Що таке шифрування і чому його слід використовувати?</summary>
+                            <p>Шифрування – це процес перетворення тексту в код, який є незрозумілим для сторонніх осіб,
+                                щоб захистити інформацію від несанкціонованого доступу. Шифрування використовується для
+                                захисту чутливої інформації, такої як паролі, особисті дані, фінансова інформація тощо.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Як текст шифрується або дешифрується?</summary>
+                            <p>Під час шифрування текст перетворюється в зашифрований код за допомогою специфічного
+                                алгоритму та ключа. Ключ шифрування – це унікальний код, який використовується для
+                                шифрування і дешифрування тексту.</p>
+                            <p>Дешифрування – це процес перетворення зашифрованого тексту назад у звичайний текст за
+                                допомогою того ж ключа, який був використаний для шифрування. Без правильного ключа
+                                дешифрування неможливе.</p>
+                        </details>
+                        <details>
+                            <summary>Чи є шифрування на цій сторінці безпечним?</summary>
+                            <p>Ні, ця сторінка підтримує лише симетричне шифрування (де один і той же ключ
+                                використовується для шифрування та дешифрування), тому текст можна легко дешифрувати,
+                                вгадавши ключ.</p>
+                        </details>
+                        <details>
+                            <summary>Чи можу я шифрувати спеціальні символи і цифри?</summary>
+                            <p>Так, шифрування на цій сторінці підтримує шифрування спеціальних символів і цифр разом із
+                                звичайними текстовими символами.</p>
+                        </details>
+                        <details>
+                            <summary>Як я можу переконатися, що текст зашифрований/дешифрований правильно?</summary>
+                            <p>Ви можете перевірити правильність шифрування/дешифрування, порівнявши результати з
+                                оригінальним текстом за допомогою криптоключів на сайті.</p>
+                        </details>
+                    </details>
+                </form>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/control_results.js" defer></script>
+    <script src="/js/encryption.js" defer></script>
+    <script src="/js/event_select_lang.js" defer></script>
+</body>
+
+</html>
