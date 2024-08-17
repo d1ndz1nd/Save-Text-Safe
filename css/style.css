@@ -54,8 +54,7 @@ textarea,
 #submitButton,
 #submitGButton,
 #copyEditedButton,
-#copyOriginalButton,
-.UseNumbers, .UseSpecialSymbols, .UseUppercaseLetters, .PasswordLength {
+#copyOriginalButton {
     margin: 1px 10px;
     border-radius: 5px;
     height: 25px;
@@ -68,7 +67,15 @@ textarea,
 
 .UseNumbers, .UseSpecialSymbols, .UseUppercaseLetters, .PasswordLength{
     cursor: default;
-} /* ЦІ КЛАСИ ПОВОДЯТЬ СЕБЕ ЯК КНОПКИ ОТІ ЗВЕРХУ, ТРЕБА ЗРОБИТИ ТАК, ЩОБ ПРИ НАВЕДЕННІ НА ЧЕКБОКС ВІН БУВ ПОІНТЕР, А НА САМУ ФОРМУ НІ(ЗАРАЗ ТАК І Є, АЛЕ І ЧЕКБОКС ЗАДІВАЄ) */
+    font-weight: none;
+    margin: 1px 10px;
+    height: 25px;
+    font-family: monospace, Helvetica;
+}
+
+#UseNumbers, #UseSpecialSymbols, #UseUppercaseLetters{
+    cursor: pointer;
+}
 
 #resetResultsButton,
 #submitButton,
