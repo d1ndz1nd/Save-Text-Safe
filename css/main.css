@@ -1,0 +1,124 @@
+* {
+    font-family: monospace, Helvetica;
+}
+
+::selection {
+    color: #b3c6ff;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #7c85ef;
+}
+
+#encryptDecryptTitle,
+#PGTitle {
+    text-align: center;
+    font-size: 24px;
+}
+
+form,
+.EncryptionHelp {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    padding: 10px 18px 10px 18px;
+    background: #4B4B4B;
+}
+
+.rounded{
+    border-radius: 8px;
+}
+
+textarea {
+    resize: none;
+    width: 90%;
+    height: 200px;
+    margin: 10px;
+}
+
+#ta-ro, #yourGeneratedPassword {
+    background-color: #b6b6b6;
+    cursor: default;
+}
+
+.EncryptionControl {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 7px;
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.TextArea {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+h1,
+label,
+p,
+li {
+    color: azure;
+    font-size: 14px;
+}
+
+#selectProcedure,
+#chooseEncryptKey,
+#resetResultsButton,
+#submitButton,
+#submitGenerateButton,
+#copyEditedButton,
+#copyOriginalButton,
+#copyGPButton {
+    margin: 1px 10px;
+    height: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 110px;
+}
+
+.UseNumbers,
+.UseSpecialSymbols,
+.UseUppercaseLetters,
+.PasswordLength,
+.GP {
+    cursor: default;
+    margin: 1px 10px;
+    height: 25px;
+}
+
+#UseNumbers,
+#UseSpecialSymbols,
+#UseUppercaseLetters {
+    cursor: pointer;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+}
+
+#PasswordLength {
+    width: 50px;
+    text-align: center;
+}
+
+#textEdited,
+#textOriginal,
+#genpas {
+    font-weight: bold;
+}
+
+.PGlabels, #yourGeneratedPassword {
+    margin: 5px 0;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.GP{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

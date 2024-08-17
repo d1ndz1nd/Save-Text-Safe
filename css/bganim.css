@@ -1,0 +1,22 @@
+html, body {
+    height: fit-content;
+}
+
+body{
+    margin: 0;
+    background-size: 900% 900%;
+    background-image: linear-gradient(45deg, #5f2c82, #49a09d);
+    animation: gradient 60s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
