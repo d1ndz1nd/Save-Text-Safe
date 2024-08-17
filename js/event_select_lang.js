@@ -27,7 +27,8 @@ const texts = {
         specialCharacters: "Can I encrypt special characters and numbers?",
         specialCharactersText: "Yes, the encryption on this page supports encryption of special characters and numbers along with regular text characters.",
         verification: "How can I make sure that the text is encrypted/decrypted correctly?",
-        verificationText: "You can check the correctness of encryption/decryption by comparing the results with the original text by using crypt-keys in the website."
+        verificationText: "You can check the correctness of encryption/decryption by comparing the results with the original text by using crypt-keys in the website.",
+        labelGP: "Generated Password",
     },
     UA: {
         titlePageEncryption: "Шифрування (текст)",
@@ -57,7 +58,8 @@ const texts = {
         specialCharacters: "Чи можу я зашифрувати спеціальні символи та цифри?",
         specialCharactersText: "Так, шифрування на цій сторінці підтримує шифрування спеціальних символів і цифр разом зі звичайними текстовими символами.",
         verification: "Як я можу переконатися, що текст зашифровано/дешифровано правильно?",
-        verificationText: "Ви можете перевірити правильність шифрування/дешифрування, порівнюючи результати з оригінальним текстом, використовуючи криптоключі на сайті."
+        verificationText: "Ви можете перевірити правильність шифрування/дешифрування, порівнюючи результати з оригінальним текстом, використовуючи криптоключі на сайті.",
+        labelGP: "Згенерований пароль",
     }
 };
 

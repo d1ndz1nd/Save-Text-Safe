@@ -52,9 +52,11 @@ textarea,
 #chooseEncryptKey,
 #resetResultsButton,
 #submitButton,
+#submitGButton,
 #copyEditedButton,
-#copyOriginalButton {
-    margin: 3px 15px;
+#copyOriginalButton,
+.UseNumbers, .UseSpecialSymbols, .UseUppercaseLetters, .PasswordLength {
+    margin: 1px 10px;
     border-radius: 5px;
     height: 25px;
     font-family: monospace, Helvetica;
@@ -63,6 +65,10 @@ textarea,
     border: none;
     outline: none;
 }
+
+.UseNumbers, .UseSpecialSymbols, .UseUppercaseLetters, .PasswordLength{
+    cursor: default;
+} /* ЦІ КЛАСИ ПОВОДЯТЬ СЕБЕ ЯК КНОПКИ ОТІ ЗВЕРХУ, ТРЕБА ЗРОБИТИ ТАК, ЩОБ ПРИ НАВЕДЕННІ НА ЧЕКБОКС ВІН БУВ ПОІНТЕР, А НА САМУ ФОРМУ НІ(ЗАРАЗ ТАК І Є, АЛЕ І ЧЕКБОКС ЗАДІВАЄ) */
 
 #resetResultsButton,
 #submitButton,
@@ -158,4 +164,13 @@ summary {
     100% {
         background-position: 0 50%;
     }
+}
+
+#UseNumbers, #UseSpecialSymbols, #UseUppercaseLetters{
+    align-items: center;
+}
+
+.PGlabels{
+    margin: 0;
+    vertical-align: middle;
 }
