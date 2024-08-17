@@ -77,6 +77,10 @@ textarea,
     cursor: pointer;
 }
 
+#PasswordLength{
+    border-radius: 5px;
+}
+
 #resetResultsButton,
 #submitButton,
 #copyEditedButton,
