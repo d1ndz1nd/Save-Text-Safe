@@ -16,7 +16,7 @@
     <header>
         <div class="header__section">
             <div class="header__item headerlogo__text">
-                <a href="about.html" title="About">SaveTextSafe © 08.24</a>
+                <a href="about.html" title="About">SaveTextSafe © 2024</a>
             </div>
         </div>
         <div class="header__section_main_services">
@@ -46,14 +46,14 @@
         <h1 id="encryptDecryptTitle" data-key="encryptDecryptTitle">Encrypt/decrypt the text</h1>
         <div class="EncryptionControl">
             <form class="rounded SelectProcedure">
-                <label data-key="selectProcedureLabel" for="selectProcedure">Select the procedure:</label>
+                <label data-key="selectProcedureLabel" for="selectProcedure">Select a procedure:</label>
                 <select id="selectProcedure" class="rounded">
                     <option value="encrypt" data-key="encryptOption">Encrypt</option>
                     <option value="decrypt" data-key="decryptOption">Decrypt</option>
                 </select>
             </form>
             <form class="rounded ChooseEncryptKey">
-                <label data-key="selectKeyLabel" for="chooseEncryptKey">Select the key:</label>
+                <label data-key="selectKeyLabel" for="chooseEncryptKey">Select a key:</label>
                 <select class="rounded" id="chooseEncryptKey">
                     <option value="SC_UA">STS UA</option>
                     <option value="Caesar_UA_3">Caesar UA 3</option>
@@ -83,15 +83,15 @@
         </div>
     </main>
     <footer>
-        <div class="rounded EncryptionHelp">
+        <div class="rounded NeedHelp">
             <p id="needHelpTitle" data-key="needHelpTitle">Need help?</p>
             <details class="rounded instruction">
                 <summary data-key="instruction">How to use the service: step-by-step instruction</summary>
                 <ol>
                     <li data-key="li1">Select the procedure: Choose "decrypt" if you want to decrypt the
                         text, or "encrypt" if you want to encrypt the text.</li>
-                    <li data-key="li2">Select the key: Here, you will select the key for your chosen
-                        procedure.</li>
+                    <li data-key="li2">Select a key: Here you select the key for the selected procedure. Supported 
+                        encryption in English and Ukrainian, such ciphers as Caesar, Atbash and author's ciphers (from the site).</li>
                     <li data-key="li3">After that, enter some text in the "Original text" form (the program
                         will not work otherwise).</li>
                     <li data-key="li4">Once you have entered text in the "Original text" form, the program
@@ -131,7 +131,7 @@
             <details class="rounded">
                 <summary data-key="specialCharacters">Can I encrypt special characters and numbers?
                 </summary>
-                <p data-key="specialCharactersText">Yes, the encryption on this page supports encryption of
+                <p data-key="specialCharactersText">No, the encryption on this page does not supports encryption of
                     special characters and numbers along with regular text characters.</p>
             </details>
             <details class="rounded">

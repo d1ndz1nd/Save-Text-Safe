@@ -1,11 +1,7 @@
-.EncryptionHelp {
+.NeedHelp {
     display: flex;
     padding: 15px;
     flex-direction: column;
-}
-
-.PGHelp{
-    padding: 15px 10px 10px 10px;
 }
 
 .instruction{
